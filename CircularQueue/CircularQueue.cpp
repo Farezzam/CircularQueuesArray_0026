@@ -64,7 +64,7 @@ public:
 		int FRONT_position = FRONT;
 		int REAR_postion = REAR;
 
-		
+		// Cek apakah antrian kosong
 		if (FRONT == -1) {
 			cout << "Queue is empty\n";
 			return;
@@ -72,7 +72,7 @@ public:
 
 		cout << "\nElements in the queue are...\n";
 
-		
+		// Jika FRONT_postion > REAR_position, iterasi dari FRONT hingga akhir array
 		if (FRONT_position <= REAR_postion) {
 			while (FRONT_position <= REAR_postion) {
 				cout << queue_array[FRONT_position] << "   ";
@@ -81,7 +81,7 @@ public:
 			cout << endl;
 		}
 		else {
-			
+			// Jika FRONT_position <= REAR_postion, iterasi dari FRONT hingga REAR
 			while (FRONT_position <= max - 1) {
 				cout << queue_array[FRONT_position] << "   ";
 				FRONT_position++;
@@ -89,7 +89,7 @@ public:
 
 			FRONT_position = 0;
 
-			
+			// Iterasi dari awal array hingga REAR
 			while (FRONT_position <= REAR_postion) {
 				cout << queue_array[FRONT_position] << "   ";
 				FRONT_position++;
